@@ -18,8 +18,8 @@ jobs:
       uses: blackduck-inc/black-duck-security-scan@v2
       with:
         ### SCANNING: Required fields
-        polaris_server_url: https://poc.polaris.blackduck.com
-        polaris_access_token: rvb1uibn0h59d9e6tnba154881kidl4mb334fss7t1mluubcg5s1ipcm4sa9io123k7lrqulthnak
+        polaris_server_url: ${{ secrets.BLACKDUCK_URL }} 
+        polaris_access_token: ${{ secrets.BLACKDUCK_API_TOKEN }}
         polaris_assessment_types: "SCA,SAST"
         polaris_project_name: Ejaz-local-project
         polaris_application_name: Ejaz-Test-App1
