@@ -1,0 +1,17 @@
+name: Black Duck Scan
+on:
+ push:
+   branches: [ main ]
+ pull_request:
+jobs:
+ blackduck_scan:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout code
+       uses: actions/checkout@v4
+     - name: Run Black Duck Security Scan
+       uses: blackduck-inc/black-duck-security-scan@v1
+       with:
+         bd_url: ${{ secrets.BLACKDUCK_URL }}
+         bd_token: ${{ secrets.BLACKDUCK_API_TOKEN }}
+         scan_mode: 'SCA'
