@@ -23,7 +23,7 @@ jobs:
         polaris_assessment_types: "SCA,SAST"
         polaris_project_name: Ejaz-local-project
         polaris_application_name: Ejaz-Test-App1
-        polaris_branch_name: branch4
+        polaris_branch_name: branch5
 
         ### SCANNING: Optional fields
         # polaris_application_name: ${{ github.event.repository.name }}
